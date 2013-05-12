@@ -27,7 +27,7 @@ class install_apache {
 		command => '/bin/echo "Timeout 7200" >> /etc/apache2/apache2.conf'
 	}
 	exec {"php-timeout-and-postmax-fix": 
-		command => '/bin/echo "memory_limit = 512M" >> /etc/php5/apache2/php.ini && /bin/echo "max_execution_time = 7200" >> /etc/php5/apache2/php.ini && /bin/echo "post_max_size = 2GB" >> /etc/php5/apache2/php.ini && /bin/echo "upload_max_filesize = 2GB" >> /etc/php5/apache2/php.ini'
+		command => '/bin/echo "memory_limit = 512M" >> /etc/php5/apache2/php.ini && /bin/echo "max_execution_time = 7200" >> /etc/php5/apache2/php.ini && /bin/echo "post_max_size = 512M" >> /etc/php5/apache2/php.ini && /bin/echo "upload_max_filesize = 512M" >> /etc/php5/apache2/php.ini'
 	}
 
 	class additional_php_packages {
