@@ -1,0 +1,10 @@
+<IfModule alias_module>
+Alias /phpmyadmin /var/www/phpmyadmin
+</IfModule>
+
+<Directory "/var/www/phpmyadmin">
+Options None
+AllowOverride All
+Order allow,deny
+Allow from all
+</Directory>
